@@ -4,7 +4,7 @@
 
 JSON lib in Systemverilog
 
-- [简介](#简介)
+- [Introduction](#Introduction)
 - [Reference](#reference)
 - [规格介绍](#规格介绍)
     - [性能考虑](#性能考虑)
@@ -17,15 +17,14 @@ JSON lib in Systemverilog
     - [仿真器适配](#仿真器适配情况) 
 
 
-## 简介
+## Introduction
 
-JSON是应用广泛的一种数据表示格式, 常用于进程间复杂数据的交互. 
+JSON is a widely used data representation format, often used for complex data exchange between processes.
 
-多年以前我在网络上发现了某前辈发布的JSON教程, 开始接触到JSON, 后面陆续开始基于JSON开发了一些小规模工具. 作为一名验证工程师, 将验证平台真正的加入到JSON生态中, 是很久远的一个想法了, 这是JSONinSV这个项目的由来.
+Many years ago, I came across a JSON tutorial published by a senior on the internet and started learning about JSON. Later, I gradually developed some small-scale tools based on JSON. As a verification engineer, integrating the verification platform into the JSON ecosystem has been a long-held idea, and that's how the JSONinSV project came about.
+The goal of this project is to provide a SystemVerilog implementation of a JSON parsing library and a generation library, enabling more purposeful interaction with external components, and helping users develop more flexible and powerful verification applications.
 
-这个项目的目的是提供SystemVerilog实现的JSON解析库和生成库, 实现和外围组件的更有目的性的互动, 帮助使用者开发出更灵活更强大的验证应用.
-
-此外, 本项目还提供了JSON库的单元测试, 后续可考虑将这里的单元测试框架独立出来进行项目上的应用.
+In addition, this project also provides unit tests for the JSON library. In the future, we can consider extracting the unit test framework here for application in other projects.
 
 ## Reference
 
