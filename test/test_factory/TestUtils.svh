@@ -1,7 +1,7 @@
 //
 //File: TestUtils.svh
 //Device: 
-//Author: zhouchuanrui@foxmail.com
+//Author: zhouchuanrui@foxmail.com / huangjs@gmail.com
 //Created:  2021/2/21 7:47:03
 //Description: test utilities, including test counter class and assertion marcos
 //Revisions: 
@@ -30,6 +30,16 @@ do begin \
 end while(0);
 
 `define EXPECT_EQ_INT(expect, actual) `EXPECT_EQ_BASE((expect)==(actual), expect, actual, "%0d")
+`define EXPECT_EQ_INT_VERBOSE(name, expect, actual) \
+do begin \
+    if ((expect)==(actual)) begin \
+        TestStat::pass_cnt++; \
+        $display(" %s: exp=%0d act=%0d PASS", name, expect, actual); \
+    end else begin \
+        TestStat::fail_cnt++; \
+        $display(" %s: exp=%0d act=%0d FAIL", name, expect, actual); \
+    end \
+end while(0);
 `define EXPECT_EQ_DOUBLE(expect, actual) `EXPECT_EQ_BASE((expect)==(actual), expect, actual, "%.17g")
 
 function bit strEqu (
